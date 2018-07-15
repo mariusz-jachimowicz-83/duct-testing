@@ -1,4 +1,4 @@
-(defproject com.mjachimowicz/duct-testing "0.1.0"
+(defproject com.mjachimowicz/duct-testing "0.1.1"
   :description "Some helpers for testing Duct based systems"
   :url "https://github.com/mariusz-jachimowicz-83/duct-testing"
   :license {:name "Eclipse Public License"
