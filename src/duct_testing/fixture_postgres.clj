@@ -68,7 +68,8 @@
 (defn with-clear-db!
   "Wraps a function call with binding to clear db.
    Used as an fixture in tests:
-   `(use-fixtures :each with-clear-db!)`"
+   `(use-fixtures :each (fn [test-fn]
+                          (with-clear-db! system-atom test-fn)))`"
   [system-atom test-fn]
   (let [db-spec (-> @system-atom :duct.database.sql/hikaricp :spec)]
     (disable-referential-integrity! db-spec)

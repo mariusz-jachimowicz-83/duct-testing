@@ -11,11 +11,11 @@
 
 (defn read-config
   []
-  (-> "testing.edn" io/resource duct/read-config))
+  (-> "/testing.edn" io/resource duct/read-config))
 
 ;; allow to have personal settings
-(when (io/resource "testing-local.edn")
-  (load "testing_local"))
+(when (io/resource "/testing-local.edn")
+  (load "/testing_local"))
 
 (defn init-system!
   []
